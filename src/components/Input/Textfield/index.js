@@ -10,7 +10,7 @@ export default function Textfield({
   required = false,
 }) {
   return (
-    <div className="relative flex w-full flex-wrap items-stretch mb-3">
+    <div className="relative flex w-full flex-wrap items-stretch ">
       <input
         className="bg-[#FFF8F8] appearance-none rounded w-full py-2 px-4 text-[#BCA8A8] leading-tight focus:outline-none h-10 placeholder-[#BCA8A8]"
         name={name}

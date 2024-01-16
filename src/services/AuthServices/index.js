@@ -8,8 +8,16 @@ const login = (data) => {
   });
 };
 
+const register = (data) => {
+  return request(`${BASE_MODEL}/register`, {
+    method: "POST",
+    data,
+  });
+};
+
 const AuthServices = {
   login,
+  register,
 };
 
 export default AuthServices;

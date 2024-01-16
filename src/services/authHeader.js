@@ -3,7 +3,7 @@ const authHeader = () => {
   if (typeof window !== "undefined") {
     user = JSON.parse(localStorage.getItem("user-pokemon"));
   }
-  if (user && user.access_token) {
+  if (user && user?.access_token) {
     return { Authorization: `Bearer ${user?.access_token}` };
   }
   return {};

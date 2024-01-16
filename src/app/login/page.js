@@ -21,10 +21,10 @@ export default function Login() {
     e.preventDefault();
     try {
       const res = await AuthServices.login(login);
-      localStorage.setItem("user-pokemon", JSON.stringify(res?.data));
+      localStorage.setItem("user-pokemon", JSON.stringify(res?.data?.data));
       router.push("/list");
     } catch (error) {
-      alert(error.response.data.message);
+      alert(error?.response?.data?.message || error?.message);
     }
   };
 
@@ -37,7 +37,7 @@ export default function Login() {
         onSubmit={handleSubmit}
       >
         <p className="text-main font-bold text-2xl">Masuk</p>
-        <p className="text-black mt-5 mb-3">Email</p>
+        <p className="text-[#8D7777] mt-5 mb-3">Email</p>
         <Textfield
           placeholder="Masukkan Email"
           name="email"
@@ -45,7 +45,7 @@ export default function Login() {
           onChange={handleChange}
           required
         />
-        <p className="text-black mt-3 mb-3">Password</p>
+        <p className="text-[#8D7777] mt-3 mb-3">Password</p>
         <Textfield
           placeholder="Masukkan Password"
           type={isShowPassword ? "text" : "password"}
