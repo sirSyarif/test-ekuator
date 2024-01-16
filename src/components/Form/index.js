@@ -42,6 +42,7 @@ export default function Form() {
     [data]
   );
 
+  // debounce funstion on search type and class
   const onInputType = useCallback(
     debounce(async (value) => {
       if (isBusy) return;
