@@ -97,7 +97,7 @@ export default function Form() {
 
   return (
     <div className="flex flex-row">
-      <div className="basis-1/3 flex flex-col items-center justify-center">
+      <div className="basis-1/3 flex flex-col items-center justify-start">
         <Image
           src={isDetail ? "/assets/example.svg" : "/assets/skeleton.svg"}
           width={270}
@@ -132,10 +132,10 @@ export default function Form() {
           ) : (
             <ReactTags
               labelText=""
-              selected={data.types}
-              onAdd={(newValue) => onAdd(newValue, "type")}
-              onDelete={(newValue) => onDelete(newValue, "type")}
-              suggestions={listType}
+              selected={[{ label: "Example", value: 1 }]}
+              onAdd={(newValue) => onAdd(newValue, "types")}
+              onDelete={(newValue) => onDelete(newValue, "types")}
+              suggestions={[{ label: "Example", value: 1 }]}
               noOptionsText="Not Found"
               onInput={onInputType}
             />
@@ -184,6 +184,8 @@ export default function Form() {
           <p className="text-main font-bold text-xl text-start w-full">
             Evolution
           </p>
+          <CardEvolution />
+          <CardEvolution />
           <CardEvolution />
         </div>
       </div>

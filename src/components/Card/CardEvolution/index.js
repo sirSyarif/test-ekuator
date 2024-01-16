@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function CardEvolution() {
   return (
-    <div className="flex flex-row bg-[#FFF8F8] rounded-2xl p-5">
+    <div className="flex flex-row bg-[#FFF8F8] rounded-2xl p-5 mt-5">
       <div className="basis-1/6">
         <div className="w-full relative pt-[100%]">
           <Image
